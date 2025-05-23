@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="ira1.jpg" />
+    <None Remove="ira2.jpg" />
+    <None Remove="ira3.jpg" />
+    <None Remove="ira4.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="ira1.jpg" />
+    <Resource Include="ira2.jpg" />
+    <Resource Include="ira3.jpg" />
+    <Resource Include="ira4.jpg" />
+  </ItemGroup>
+
+</Project>

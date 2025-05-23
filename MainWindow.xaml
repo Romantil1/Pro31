@@ -1,0 +1,110 @@
+﻿<Window x:Class="Pro31.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Pro31"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0,3*"/>
+            <ColumnDefinition Width="0,6*"/>
+            <ColumnDefinition Width="0,3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TabControl Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Margin="10,25,10,0">
+            <TabItem Header="Инструменты">
+
+                <StackPanel Margin="0,0,0,320" Height="25">
+                    <Menu>
+
+                        <MenuItem Header="Файл">
+
+                            <MenuItem Header="Новый"/>
+                            <MenuItem Header="Открыть"/>
+
+                        </MenuItem>
+
+                        <MenuItem Header="Распесание">
+
+                            <MenuItem Header="Обрезать"/>
+                            <MenuItem Header="Изменить цвет"/>
+                            <MenuItem Header="Обрезать квадрат"/>
+                            <MenuItem Header="Произвольная Обрезка"/>
+
+                        </MenuItem>
+                    </Menu>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Расписание"></TabItem>
+        </TabControl>
+
+        <TextBlock Text="Лучшая девушка" Grid.Column="0" HorizontalAlignment="Center" FontSize="20" FontWeight="Black" ></TextBlock>
+
+        <ScrollViewer Grid.RowSpan="3" Margin="0,50,0,0">
+
+            <ToolBar Height="700">
+                <StackPanel Orientation="Vertical">
+
+                    <StackPanel>
+                        <Image Height="150"   Source="ira1.jpg" Width="150"/>
+                        <TextBlock HorizontalAlignment="Center">rgtghg</TextBlock>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <Image Height="150" Source="ira2.jpg" Width="150"></Image>
+                        <TextBlock HorizontalAlignment="Center">rgtghg</TextBlock>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <Image Height="150" Source="ira3.jpg" Width="150" ></Image>
+                        <TextBlock HorizontalAlignment="Center">rgtghg</TextBlock>
+                    </StackPanel>
+
+                    <StackPanel>
+                        <Image Height="150" Source="ira4.jpg" Width="150" ></Image>
+                        <TextBlock HorizontalAlignment="Center">rgtghg</TextBlock>
+                    </StackPanel>
+
+                </StackPanel>
+            </ToolBar>
+
+        </ScrollViewer>
+
+
+        <StackPanel Grid.Column="2" Grid.Row="0" Grid.RowSpan="2">
+            <Viewbox>
+                <Calendar FirstDayOfWeek="Sunday" DisplayDate="11.1.2022" Margin="5 0 0 0">
+                    <Calendar.BlackoutDates>
+                        <CalendarDateRange Start="11.1.2022" End="11.20.2022" />
+                    </Calendar.BlackoutDates>
+                </Calendar>
+            </Viewbox>
+        </StackPanel>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Window>
