@@ -19,43 +19,16 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-
-        <TabControl Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Margin="10,25,10,0">
-            <TabItem Header="Инструменты">
-
-                <StackPanel Margin="0,0,0,320" Height="25">
-                    <Menu>
-
-                        <MenuItem Header="Файл">
-
-                            <MenuItem Header="Новый"/>
-                            <MenuItem Header="Открыть"/>
-
-                        </MenuItem>
-
-                        <MenuItem Header="Распесание">
-
-                            <MenuItem Header="Обрезать"/>
-                            <MenuItem Header="Изменить цвет"/>
-                            <MenuItem Header="Обрезать квадрат"/>
-                            <MenuItem Header="Произвольная Обрезка"/>
-
-                        </MenuItem>
-                    </Menu>
-                </StackPanel>
-            </TabItem>
-            <TabItem Header="Расписание"></TabItem>
-        </TabControl>
-
-        <TextBlock Text="Лучшая девушка" Grid.Column="0" HorizontalAlignment="Center" FontSize="20" FontWeight="Black" ></TextBlock>
+        
+        <TextBlock Foreground="Gray"  Text="Лучшая девушка" Grid.Column="0" HorizontalAlignment="Center" FontSize="20" FontWeight="Black" ></TextBlock>
 
         <ScrollViewer Grid.RowSpan="3" Margin="0,50,0,0">
 
             <ToolBar Height="700">
-                <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
 
                     <StackPanel>
-                        <Image Height="150"   Source="ira1.jpg" Width="150"/>
+                        <Image  Height="150"  Source="ira1.jpg" Width="150"/>
                         <TextBlock HorizontalAlignment="Center">rgtghg</TextBlock>
                     </StackPanel>
 
@@ -79,7 +52,6 @@
 
         </ScrollViewer>
 
-
         <StackPanel Grid.Column="2" Grid.Row="0" Grid.RowSpan="2">
             <Viewbox>
                 <Calendar FirstDayOfWeek="Sunday" DisplayDate="11.1.2022" Margin="5 0 0 0">
@@ -90,21 +62,43 @@
             </Viewbox>
         </StackPanel>
 
+        <TabControl Grid.Row="0"  Grid.Column="1"  Grid.RowSpan="3" Margin="10 0 0 0">
+            <TabItem Header="Инструменты">
+                <StackPanel>
+                    <Menu>
+                        <MenuItem Header="Файл">
+                            <MenuItem Header="Открыть"/>
+                            <MenuItem Header="Новый"/>
+                        </MenuItem>
+                        <MenuItem Header="Редактировать">
+                            <MenuItem Header="Обрезать">
+                                <MenuItem Header="Обрезать квадрат"/>
+                                <MenuItem Header="Произвольная обрезка"/>
+                            </MenuItem>
+                            <MenuItem Header="Изменить цвет"/>
+                        </MenuItem>
+                    </Menu>
+                    <TextBlock Text="Услуги" FontWeight="Bold"
+                                   FontSize="20"
+                                   FontFamily="Impact"/>
+                    <ListBox BorderThickness="0">
+                        <ListBoxItem Content="Фотография" FontSize="16"/>
+                        <ListBoxItem Content="Ретуширование" FontSize="16"/>
+                        <ListBoxItem Content="Исправление недостатков" FontSize="16"/>
+                        <ListBoxItem Content="Изминение фона" FontSize="16"/>
+                        <ListBox.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Редактировать"/>
+                                <MenuItem Header="Удалить"/>
+                                <MenuItem Header="Созать на основе"/>
+                            </ContextMenu>
+                        </ListBox.ContextMenu>
+                    </ListBox>
+                </StackPanel>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </TabItem>
+            <TabItem Header="Расписание"></TabItem>
+        </TabControl>
 
     </Grid>
 </Window>
